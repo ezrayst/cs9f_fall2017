@@ -8,7 +8,7 @@
  * It should read legal cat and mouse positions from the user
  * and return the position values in its two arguments.
  */
-void GetPositions(Position cat, Position mouse) {
+void GetPositions(Position& cat, Position& mouse) {
 
 	float mouse_angle, cat_radius, cat_angle;
 	const float pi = 3.14159265358979323846;
@@ -26,8 +26,6 @@ void GetPositions(Position cat, Position mouse) {
 	mouse.SetAbsolutePosition(1, mouse_angle * (pi / 180));
 	cat.SetAbsolutePosition(cat_radius, cat_angle * (pi / 180));
 
-	// mouse.Print();
-	// cat.Print();
 }
 
 /**
@@ -38,7 +36,8 @@ void GetPositions(Position cat, Position mouse) {
  * catch the mouse, or 30 time units will go by and the cat will 
  * give up.
  */
-void RunChase(Position cat, Position mouse) {
+void RunChase(Position& cat, Position& mouse) {  
+
     Position oldCat = cat;
 	Position newCat = cat;
 
@@ -79,24 +78,7 @@ void RunChase(Position cat, Position mouse) {
 
 int main() {
     Position cat, mouse;
-    // GetPositions(cat, mouse);
-
-	float mouse_angle, cat_radius, cat_angle;
-	const float pi = 3.14159265358979323846;
-
-	std::cout << "Enter the position of the cat (radius in m): ";
-	std::cin >> cat_radius;
-
-	std::cout << "Enter the position of the cat (angle in degrees): ";
-	std::cin >> cat_angle;
-
-	std::cout << "Enter the position of the mouse (angle in degrees): ";
-	std::cin >> mouse_angle;
-
-	//! Store angle in radians
-	mouse.SetAbsolutePosition(1, mouse_angle * (pi / 180));
-	cat.SetAbsolutePosition(cat_radius, cat_angle * (pi / 180));
-
+    GetPositions(cat, mouse);
     RunChase(cat, mouse);
 
     return 0;
