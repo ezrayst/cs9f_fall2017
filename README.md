@@ -34,6 +34,9 @@ File(s):
 Compile:
 ```
 g++ -g -Wall -o p2.1 p2.1.cpp
+g++ -g -Wall -o p2.2 p2.2.cpp
+g++ -g -Wall -o p2.3 p2.3.cpp
+
 ```
 
 # Program 3
