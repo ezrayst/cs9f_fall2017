@@ -44,5 +44,39 @@ g++ -g -Wall -o p2.3 p2.3.cpp
 ```
 
 # Program 3
+File(s): 
+- destr.test.cpp
+- destr.test.txt
+- lists.h
+- lists.cpp
+- selection.cpp
+- CLLNode.h
+- CLLNode.cpp
+- amoebamain.cpp
+- amoebas.h
+- amoebas.cpp
+
+Compile:
+```
+g++ -g -Wall -o destr.test destr.test.cpp
+g++ -g -Wall -o selection selection.cpp
+g++ -g -Wall -o amoeba amoebamain.cpp
+
+```
 
 # Program 4
+- cat+mouse.cpp
+- positions.h
+- positions.cpp
+- park.h
+- park.cpp
+- p4.2.cpp
+- sorted.lists.h
+- sltest.cpp
+
+Compile:
+```
+g++ -g -Wall -o cat+mouse cat+mouse.cpp
+g++ -g -Wall -o p4.2 p4.2.cpp
+
+```
