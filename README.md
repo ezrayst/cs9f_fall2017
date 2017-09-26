@@ -30,6 +30,8 @@ File(s):
 - p2.1.cpp
 - inventory.h
 - p2.3.cpp
+- board.h
+- board.cpp
 
 Compile:
 ```
