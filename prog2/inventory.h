@@ -5,7 +5,7 @@ class Inventory
 {
 public:
 	Inventory();
-	
+
 	void Update(string item, int amount);
 
 	void ListByName();
@@ -15,3 +15,5 @@ public:
 private:
 	// TODO:You provide this.
 };
+
+#include "inventory.cpp"

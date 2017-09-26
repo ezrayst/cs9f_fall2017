@@ -28,7 +28,9 @@ g++ -g -Wall -o cat+mouse cat+mouse.cpp
 # Program 2
 File(s): 
 - p2.1.cpp
+- p2.2.cpp
 - inventory.h
+- inventory.cpp
 - p2.3.cpp
 - board.h
 - board.cpp
