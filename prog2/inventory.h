@@ -6,14 +6,15 @@ class Inventory
 public:
 	Inventory();
 
-	void Update(string item, int amount);
+	void Update(std::string& item, int amount);
 
 	void ListByName();
 
 	void ListByQuantity();
 
 private:
-	// TODO:You provide this.
+	std::vector< std::vector<std::string, int> > inventory_;
+
 };
 
 #include "inventory.cpp"

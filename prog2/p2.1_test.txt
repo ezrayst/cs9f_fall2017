@@ -1,0 +1,4 @@
+update book 2
+list 2
+list book
+quit
