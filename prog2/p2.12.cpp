@@ -4,6 +4,11 @@
 #include <string>
 #include <stdlib.h>
 
+#include "inventory.h"
+
+//! Make the myProperties global
+Inventory myProperties;
+
 void InterpretCommands(std::istream& cmds);
 
 void InterpretUpdate(std::istream& cmds) {
@@ -15,6 +20,7 @@ void InterpretUpdate(std::istream& cmds) {
           std::cout << "Invalid input! \nPlease write your command: ";  
         } else {
           std::cout << "Valid input. Copy: update " << word << " " << number << "\nPlease write your command: ";
+          myProperties.Update(word, number);
         }
 
     } else {
@@ -30,8 +36,10 @@ void InterpretList(std::istream& cmds) {
           std::cout << "Invalid input! \nPlease write your command: ";  
         } else if (argument == "names") {
           std::cout << "Valid input. Copy: list names \nPlease write your command: ";
+          myProperties.ListByName();
         } else if (argument == "quantities") {
           std::cout << "Valid input. Copy: list quantities \nPlease write your command: ";          
+          myProperties.ListByQuantity();
         } else {
           std::cout << "Invalid input! \nPlease write your command: ";  
         }

@@ -28,9 +28,12 @@ g++ -g -Wall -o cat+mouse cat+mouse.cpp
 # Program 2
 File(s): 
 - p2.1.cpp
+- p2.1_test.txt
 - p2.2.cpp
+- p2.12.cpp
 - inventory.h
 - inventory.cpp
+- inventoryItem.h
 - p2.3.cpp
 - board.h
 - board.cpp
@@ -39,6 +42,7 @@ Compile:
 ```
 g++ -g -Wall -o p2.1 p2.1.cpp
 g++ -g -Wall -o p2.2 p2.2.cpp
+g++ -g -Wall -o p2.12 p2.12.cpp
 g++ -g -Wall -o p2.3 p2.3.cpp
 
 ```

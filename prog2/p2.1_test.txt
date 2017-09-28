@@ -1,4 +1,11 @@
-update book 2
-list 2
-list book
+update pen 2147483645
+update pen 3
+update book 4
+update book -5
+update ruler -2147483647
+update ruler -6
+update eraser 8
+update paper 1
+list names
+list quantities
 quit
