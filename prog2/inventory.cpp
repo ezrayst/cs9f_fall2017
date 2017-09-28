@@ -12,9 +12,12 @@ void Inventory::Update(std::string item, int amount) {
 	//! Check whether we have the inventory item in list
 	for (unsigned i = 0; i < inventory_.size(); ++i) {
 		if (inventory_.at(i).getItem() == item) {
-			id = i;
-			existFlag = true;
-			break;
+			if (inventory_.at(i).getAmount() != std::numeric_limits<int>::max() && 
+			    inventory_.at(i).getAmount() != std::numeric_limits<int>::min() ) {
+				id = i;
+				existFlag = true;
+				break;
+			}
 		}
 	}
 	

@@ -41,27 +41,30 @@ void InterpretList(std::istream& cmds) {
 }
 
 void InterpretBatch(std::istream& cmds) {
-    std::string filename, line; 
+    std::string filename, line, temp; 
     std::ifstream file;
     
     if (cmds >> filename) {
-        std::cout << "Valid input. Copy: batch " << filename << "\n";
+        if (cmds >> temp) {
+          std::cout << "Invalid input! \nPlease write your command: ";  
+        } else {
+          std::cout << "Valid input. Copy: batch " << filename << "\n";
         
-        std::ifstream file;
-        file.open(filename.c_str(), std::ios::in);
-        if (!file.is_open())
-          std::cout << "Specified input file does not exist.\n";
-        if (file.good()) {
-          do {
-            std::getline(file, line);
-            std::istringstream inputline;
-            inputline.str(line);
-            std::cout << line << "\n";
-            InterpretCommands(inputline);
-          } 
-          while (!file.eof());
+          std::ifstream file;
+          file.open(filename.c_str(), std::ios::in);
+          if (!file.is_open())
+            std::cout << "Specified input file does not exist.\n";
+          if (file.good()) {
+            do {
+              std::getline(file, line);
+              std::istringstream inputline;
+              inputline.str(line);
+              std::cout << line << "\n";
+              InterpretCommands(inputline);
+            } 
+            while (!file.eof());
         }
-
+      }
     } else {
         std::cout << "Invalid input! \nPlease write your command: ";
     }
@@ -107,8 +110,6 @@ void InterpretCommands(std::istream& cmds) {
             std::cerr << "Unrecognizable command word." << std::endl;
             std::cout << "Please write your command: ";
         }
-
-        std::getline(cmds, line);    
     }
 }
 
